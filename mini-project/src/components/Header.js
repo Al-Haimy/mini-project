@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <h1>
-        The <strong>Anime</strong> Search{" "}
+        The <strong>Li JingJing</strong> Search{" "}
       </h1>
     </header>
   );
