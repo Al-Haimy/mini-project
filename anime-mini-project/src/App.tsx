@@ -1,10 +1,15 @@
-import React, { FC } from "react";
-
+import React, { FC, useEffect } from "react";
+import SearchBar from "./components/SearchBar";
+import { fetchAnimeQuerySearch } from "./API";
 const App: FC = () => {
-  return;
-  <div className="App">
-    <Header />
-  </div>;
+  useEffect(() => {
+    fetchAnimeQuerySearch();
+  }, [250]);
+  return (
+    <div className="App">
+      <SearchBar />
+    </div>
+  );
 };
 
 export default App;
