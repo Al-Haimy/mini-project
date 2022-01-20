@@ -20,7 +20,7 @@ mini-project > anime-mini-project
 ## experience 
 This extension was built using React JS [Pomodoro Timer](https://microsoftedge.microsoft.com/addons/detail/pomodor-timer/nodhlmmclikbcaionpcjjeimigdigclb).
 
- THis store was Built using Wordpress [Matjar Kamel](https://pages.github.com/).
+ THis store was Built using Wordpress [Matjar Kamel](https://matjarkamel.com/).
  
  ## contact 
  [Linkedin](https://www.linkedin.com/in/mohammed-al-haimi-21b8a2167/).
