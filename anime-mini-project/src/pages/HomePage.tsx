@@ -42,7 +42,6 @@ function HomePage(props: Props) {
     clearTimeout(timeid);
     if (query !== "") {
       timeid = setTimeout(() => {
-        console.log("triggered");
         startQuery(query);
       }, 500);
     }

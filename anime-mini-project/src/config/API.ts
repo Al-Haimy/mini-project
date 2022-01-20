@@ -38,7 +38,7 @@ export const fetchAnimeQuerySearch = async (query: string) => {
 export const fetchSingleAnime = async (ids: any) => {
   const endpoint = `https://api.jikan.moe/v3/anime/${ids}`;
   const data = await (await fetch(endpoint)).json();
-  console.log("data");
+
   return {
     title: data.title,
     synopsis: data.synopsis,

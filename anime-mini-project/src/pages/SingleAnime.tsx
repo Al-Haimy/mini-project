@@ -56,7 +56,6 @@ const SingleAnime = (props: Props) => {
     SetAnimeImage(result.image);
 
     SetLoading(false);
-    console.log(animeStatus);
   };
   useEffect(() => {
     getAnime();

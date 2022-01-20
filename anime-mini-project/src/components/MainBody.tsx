@@ -19,8 +19,6 @@ type Props = {
 };
 
 const MainBody: React.FC<Props> = ({ mainCard, pages, page, callback }) => {
-  console.log(pages);
-
   return (
     <Container maxWidth="lg">
       <Grid
