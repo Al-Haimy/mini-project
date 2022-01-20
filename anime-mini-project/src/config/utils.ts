@@ -1,8 +1,9 @@
+// function to add a slug before sending the datat to react element
 export const convertToSlug = (title: string) => {
   return title.replace(/\s+/g, "-").replace(":", "").toLowerCase();
 };
 
-// const fromNumberToString = (num: number) => {};
+// function to add and extra data for the single page
 export const convertToAray = (data: any) => {
   return [
     {

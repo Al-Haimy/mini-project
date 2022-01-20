@@ -1,4 +1,5 @@
-import { convertToSlug, convertToAray } from "./utils";
+import { convertToSlug, convertToAray } from "../config/utils";
+//type for the search result
 export type AnimeResult = {
   airing: boolean;
   end_date: string;
@@ -14,7 +15,7 @@ export type AnimeResult = {
   type: string;
   url: string;
 };
-
+// a type for the single anime fetch result
 export type SingleAnimeData = {
   title: string;
   subTitle: string;
@@ -22,9 +23,9 @@ export type SingleAnimeData = {
   secondColor: string;
   backColor: string;
 };
-
+// same type but I added the slug
 export type ResultData = AnimeResult & { slug: string };
-
+// function to fethc the search
 export const fetchAnimeQuerySearch = async (query: string) => {
   const endpoint = `https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc`;
   const data = await (await fetch(endpoint)).json();
@@ -34,7 +35,7 @@ export const fetchAnimeQuerySearch = async (query: string) => {
     slug: convertToSlug(res.title),
   }));
 };
-
+// function to fetch the single anime
 export const fetchSingleAnime = async (ids: any) => {
   const endpoint = `https://api.jikan.moe/v3/anime/${ids}`;
   const data = await (await fetch(endpoint)).json();

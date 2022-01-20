@@ -1,12 +1,11 @@
 import React from "react";
 
 import { styled, alpha } from "@mui/material/styles";
-
+import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { Grid } from "@mui/material";
+
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,

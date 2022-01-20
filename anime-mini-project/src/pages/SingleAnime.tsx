@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { fetchSingleAnime, SingleAnimeData } from "../API";
+import { fetchSingleAnime, SingleAnimeData } from "../config/API";
 import {
   Grid,
   Box,
@@ -15,7 +15,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import HeaderBar from "../components/HeaderBar";
 
 interface Props {}
-
+// adding the loading section here
 export const LoadingSection = () => {
   return (
     <Grid
@@ -35,16 +35,16 @@ export const LoadingSection = () => {
   );
 };
 
+// the main content
 const SingleAnime = (props: Props) => {
   const [loading, SetLoading] = useState(true);
-
   const [animeTitle, SetAnimeTitle] = useState<string>("");
   const [animeStatus, SetAnimeStatus] = useState<SingleAnimeData[]>([]);
   const [animeSynopsis, SetAnimeSynopsis] = useState<string>();
   const [animeImage, SetAnimeImage] = useState<string>();
-
+  // using useLocation hook to pass the anime id
   const location = useLocation();
-
+  // function to fetch the anime
   const getAnime = async () => {
     SetLoading(true);
 
@@ -57,6 +57,8 @@ const SingleAnime = (props: Props) => {
 
     SetLoading(false);
   };
+
+  // I use useEffect hook so when the page opens it tregers the fetch function
   useEffect(() => {
     getAnime();
   }, []);
@@ -64,8 +66,9 @@ const SingleAnime = (props: Props) => {
   return (
     <>
       <div className="dart">
-        <HeaderBar title="Anime Search App" />
+        {/* if it is loading will show the loading line  */}
         {loading && <LoadingSection />}
+        {/* if it is not loading it will show the rest of the part  */}
         {!loading ? (
           <Container
             maxWidth="lg"
@@ -111,6 +114,8 @@ const SingleAnime = (props: Props) => {
                       {animeSynopsis}
                     </Typography>
                   </Grid>
+
+                  {/* lopping for similar items for less code  */}
                   {animeStatus.map((data: SingleAnimeData, index: number) => (
                     <Grid key={index} item xs={4}>
                       <Box
