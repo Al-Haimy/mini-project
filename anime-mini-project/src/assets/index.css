@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&display=swap");
 body {
   background-color: #eeeeee;
   padding: 0;
@@ -26,5 +27,19 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.boxes h3 {
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.boxes p {
+  text-align: center;
+  padding: 0;
+  margin-top: 4px;
+  font-family: "Montserrat", sans-serif;
 }
 /*# sourceMappingURL=index.css.map */

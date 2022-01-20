@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import MainBody from "../components/MainBody";
+import HeaderBar from "../components/HeaderBar";
 import { fetchAnimeQuerySearch, ResultData } from "../API";
 type Timer = ReturnType<typeof setTimeout>;
 let timeid: Timer;
@@ -50,6 +51,7 @@ function HomePage(props: Props) {
 
   return (
     <>
+      <HeaderBar title="Anime Search Bar" />
       <SearchBar callback={fetchSearch} query={query} />
       {searchResults.length !== 0 && pages > 0 ? (
         <MainBody

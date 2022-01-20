@@ -1,21 +1,19 @@
 import React from "react";
 
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
+
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-
+import { Grid } from "@mui/material";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.15),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginLeft: 0,
   width: "100%",
@@ -30,13 +28,14 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   height: "100%",
   position: "absolute",
   pointerEvents: "none",
+  color: alpha(theme.palette.common.black, 0.25),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
+  color: "black",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -59,17 +58,22 @@ interface Props {
 
 const SearchBar = (props: Props) => {
   return (
-    <Box sx={{ flexGrow: 1 }} className="searchbar">
-      <AppBar position="static">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            ANIME SEARCH PROJECT
-          </Typography>
+    <Grid
+      container
+      columns={16}
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        paddingTop: 3,
+      }}
+    >
+      <Grid item sm={12} xs={12}>
+        <Box
+          sx={{
+            flexGrow: 1,
+          }}
+        >
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -81,9 +85,9 @@ const SearchBar = (props: Props) => {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-        </Toolbar>
-      </AppBar>
-    </Box>
+        </Box>
+      </Grid>
+    </Grid>
   );
 };
 
