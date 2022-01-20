@@ -52,7 +52,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-interface Props {}
+interface Props {
+  callback: any;
+  query: string;
+}
 
 const SearchBar = (props: Props) => {
   return (
@@ -72,6 +75,8 @@ const SearchBar = (props: Props) => {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+              value={props.query}
+              onChange={props.callback}
               placeholder="Search For An Anime..."
               inputProps={{ "aria-label": "search" }}
             />
