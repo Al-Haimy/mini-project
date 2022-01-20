@@ -17,7 +17,7 @@ mini-project > anime-mini-project
 ![second page](https://i.imgur.com/Jx4L4aW.png)
 
 
-## Previous work 
+## experience 
 This extension was built using React JS [Pomodoro Timer](https://microsoftedge.microsoft.com/addons/detail/pomodor-timer/nodhlmmclikbcaionpcjjeimigdigclb).
 
  THis store was Built using Wordpress [Matjar Kamel](https://pages.github.com/).
