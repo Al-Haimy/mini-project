@@ -26,7 +26,11 @@ const App: FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route
             path="/anime/*"
-            element={<SingleAnime SetIdNumber={SetIdNumber} anime={anime} />}
+            element={
+              idNumber !== 0 ? (
+                <SingleAnime SetIdNumber={SetIdNumber} anime={anime} />
+              ) : null
+            }
           />
         </Routes>
       </Router>

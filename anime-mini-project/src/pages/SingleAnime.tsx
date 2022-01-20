@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { fetchSingleAnime } from "../API";
+
 interface Props {
   SetIdNumber: any;
   anime: any;
@@ -20,7 +21,7 @@ const SingleAnime = (props: Props) => {
   return (
     <>
       <div className="dart">
-        <h1>{props.anime.title}</h1>
+        <h1></h1>
       </div>
     </>
   );
