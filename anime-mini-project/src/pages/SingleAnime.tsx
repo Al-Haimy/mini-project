@@ -12,7 +12,6 @@ import {
   Button,
 } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import HeaderBar from "../components/HeaderBar";
 
 interface Props {}
 // adding the loading section here

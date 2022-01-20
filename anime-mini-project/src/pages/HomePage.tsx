@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import MainBody from "../components/MainBody";
-import HeaderBar from "../components/HeaderBar";
 import { fetchAnimeQuerySearch, ResultData } from "../config/API";
 
 // adding type for the timer to delay the api call
