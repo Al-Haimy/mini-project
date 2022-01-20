@@ -34,6 +34,7 @@ a {
   padding: 0;
   margin-bottom: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 24px;
 }
 
 .boxes p {
@@ -41,5 +42,10 @@ a {
   padding: 0;
   margin-top: 4px;
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.synopsis {
+  text-align: justify;
 }
 /*# sourceMappingURL=index.css.map */

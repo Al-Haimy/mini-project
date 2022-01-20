@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { fetchSingleAnime, SingleAnimeData } from "../API";
 import {
   Grid,
@@ -37,7 +37,7 @@ export const LoadingSection = () => {
 
 const SingleAnime = (props: Props) => {
   const [loading, SetLoading] = useState(true);
-  const [idNumber, SetIdNumber] = useState<any>(0);
+
   const [animeTitle, SetAnimeTitle] = useState<string>("");
   const [animeStatus, SetAnimeStatus] = useState<SingleAnimeData[]>([]);
   const [animeSynopsis, SetAnimeSynopsis] = useState<string>();
@@ -47,7 +47,6 @@ const SingleAnime = (props: Props) => {
 
   const getAnime = async () => {
     SetLoading(true);
-    SetIdNumber(location.state);
 
     const result = await fetchSingleAnime(location.state);
 
@@ -105,7 +104,11 @@ const SingleAnime = (props: Props) => {
                     <Typography gutterBottom variant="h5" component="div">
                       {animeTitle}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      className="synopsis"
+                    >
                       {animeSynopsis}
                     </Typography>
                   </Grid>

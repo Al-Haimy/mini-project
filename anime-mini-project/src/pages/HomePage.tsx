@@ -1,11 +1,11 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import MainBody from "../components/MainBody";
 import HeaderBar from "../components/HeaderBar";
 import { fetchAnimeQuerySearch, ResultData } from "../API";
 type Timer = ReturnType<typeof setTimeout>;
 let timeid: Timer;
-
+const itemsPerPage: number = 8;
 interface Props {}
 
 function HomePage(props: Props) {
@@ -13,7 +13,6 @@ function HomePage(props: Props) {
   const [query, SetQuery] = useState<string>("");
   const [pages, SetPages] = useState<number>(0);
   const [currentPage, SetCurrentPage] = useState<number>(1);
-  const [itemsPerPage, SetItemsPerPage] = useState(8);
   const [currentData, SetCurrentData] = useState<ResultData[]>([]);
 
   const startQuery = async (query: string) => {

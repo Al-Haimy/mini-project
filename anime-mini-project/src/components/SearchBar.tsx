@@ -5,7 +5,6 @@ import { styled, alpha } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { Grid } from "@mui/material";
 const Search = styled("div")(({ theme }) => ({
