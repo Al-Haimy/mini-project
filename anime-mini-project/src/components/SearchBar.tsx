@@ -1,5 +1,4 @@
 import React from "react";
-
 import { styled, alpha } from "@mui/material/styles";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -88,5 +87,4 @@ const SearchBar = (props: Props) => {
     </Grid>
   );
 };
-
 export default SearchBar;
